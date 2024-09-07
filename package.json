@@ -1,0 +1,19 @@
+{
+  "name": "voosh-rk",
+  "version": "1.0.0",
+  "description": "Assignment for Voosh By Rohit Kumar R",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohitrk185/voosh-rk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohitrk185/voosh-rk/issues"
+  },
+  "homepage": "https://github.com/rohitrk185/voosh-rk#readme"
+}
