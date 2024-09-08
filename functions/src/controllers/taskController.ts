@@ -117,7 +117,8 @@ export const updateUserTask = async (req: express.Request, res: express.Response
     });
   }
 
-  const {name, description, dueDate, status} = req.body;
+  const {name, description, dueDate} = req.body;
+  let {status} = req.body;
 
   console.log("dueDate: ", dueDate);
 
@@ -139,7 +140,19 @@ export const updateUserTask = async (req: express.Request, res: express.Response
     }
     updatedTask["dueDate"] = firebaseDueDate;
   }
-  if (status && status in TaskStatus) {
+
+  if (status === TaskStatus.todo) {
+    console.log("The task is in the TODO state.");
+  } else if (status === TaskStatus["in-progress"]) {
+    console.log("The task is in progress.");
+  } else if (status === TaskStatus.completed) {
+    console.log("The task is done.");
+  } else {
+    console.log("Unknown status.");
+    status = null;
+  }
+
+  if (status) {
     updatedTask["status"] = status;
   }
 
